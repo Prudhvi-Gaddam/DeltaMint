@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "01_Bronze_Generate_Reviews",
+				"name": "01_Bronze_Generate_FinData",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/01_Bronze_Generate_Reviews"
+					"notebookPath": "/01_Bronze_Generate_FinData"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
@@ -23,11 +23,11 @@
 				}
 			},
 			{
-				"name": "02_silver_enrich_reviews",
+				"name": "02_silver_enrich_FinData",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "01_Bronze_Generate_Reviews",
+						"activity": "01_Bronze_Generate_FinData",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -42,7 +42,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/02_silver_enrich_reviews"
+					"notebookPath": "/02_silver_enrich_FinData"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
@@ -50,11 +50,11 @@
 				}
 			},
 			{
-				"name": "03_gold_aggregate_reviews",
+				"name": "03_gold_aggregate_FinData",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "02_silver_enrich_reviews",
+						"activity": "02_silver_enrich_FinData",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -69,7 +69,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/03_gold_aggregate_reviews"
+					"notebookPath": "/03_gold_aggregate_FinData"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",

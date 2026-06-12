@@ -1,0 +1,15 @@
+{
+	"name": "adf-DeltaMint-Demo",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a9a3fe92-bcec-4f95-a097-1e39a9c2b2f0",
+		"tenantId": "bbdedfbd-54a8-4e68-86fe-07d569135608"
+	}
+}
